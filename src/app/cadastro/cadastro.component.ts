@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,10 +13,10 @@ export class CadastroComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  cadastrar(form : any){
+  cadastrar(form : NgForm){
     console.log(form);
     if(form.valid){
-      this.router.navigate(['sucesso']);
+      this.router.navigate(['./sucesso']);
       console.log('Formulário enviado');
     }else{
       console.log('Formulário inválido');
