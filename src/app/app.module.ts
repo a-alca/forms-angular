@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.co
 import { FormsModule } from '@angular/forms';
 import { MensagemComponent } from './components/mensagem/mensagem.component';
 import { MaiorIdadeDirective } from './directives/maior-idade.directive';
+import { CepValidatorDirective } from './directives/cep-validator.directive';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { MaiorIdadeDirective } from './directives/maior-idade.directive';
     CadastroComponent,
     SucessoCadastroComponent,
     MensagemComponent,
-    MaiorIdadeDirective
+    MaiorIdadeDirective,
+    CepValidatorDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
